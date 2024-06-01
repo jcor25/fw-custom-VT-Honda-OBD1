@@ -1,81 +1,425 @@
 pins:
-  - id: B14
+  - pin: A1
+    meta: H144_LS_1
+    function: Injector 1 Output
     class: outputs
-    ts_name: B14 Output
+    type: inj
+    ts_name: A1  - INJ 1
+    color: blue
 
-  - id: EFI_ADC_0
+  - pin: A2
+    meta: H144_LS_4
+    function: Injector 4 Output
+    class: outputs
+    type: inj
+    ts_name: A2  - INJ 4
+    color: blue
+
+  - pin: A3
+    meta: H144_LS_2
+    function: Injector 2 Output
+    class: outputs
+    type: inj
+    ts_name: A2  - INJ 2
+    color: blue
+
+  - pin: A4
+    meta: H144_OUT_PWM7
+    class: outputs
+    function: Vtec solineod 
+    type: ls
+    ts_name: A4  - VTS/HS1
+    color: purple
+
+  - pin: A5
+    meta: H144_LS_3
+    function: Injector 3 Output
+    class: outputs
+    type: inj
+    ts_name: A5  - INJ 3
+    color: blue
+
+  - pin: A6
+    meta: H144_IGN_6
+    function: Tach Output
+    class: outputs
+    type: ls
+    ts_name: A6  - TACH
+    color: blue
+
+  - pin: A7
+    meta: H144_OUT_IO11
+    class: outputs
+    function: Fuel Pump Relay Output
+    type: ls
+    ts_name: A7  - FP Rly
+    color: purple
+
+  - pin: A8
+    meta: H144_IGN_1
+    class: outputs
+    function: Smart Ignition 1 Output
+    type: ign
+    ts_name: A8  - IGN 1
+    color: yellow
+
+  - pin: A9
+    meta: H144_OUT_PWM2
+    class: outputs
+    function: Idle Output (low)
+    type: ls
+    ts_name: A9  - IACV/PWM1
+    color: purple
+
+  - pin: A10
+    meta: H144_IGN_2
+    class: outputs
+    function: Smart Ignition 2 Output
+    type: ign
+    ts_name: A10 - IGN 2
+    color: yellow
+
+  - pin: A11
+    meta: H144_OUT_PWM3
+    class: outputs
+    function: PWM1 Output (low)
+    type: ls
+    ts_name: A11 - EGR/PWM2
+    color: purple
+
+  - pin: A12
+    meta: H144_OUT_IO8
+    class: outputs
+    function: Fan Relay Output (low)
+    type: ls
+    ts_name: A12 - FAN Rly
+    color: purple
+
+  - pin: A13
+    meta: H144_OUT_IO7
+    class: outputs
+    function: MIL Output (low)
+    type: ls
+    ts_name: A13 - MIL CTR
+    color: purple
+
+  - pin: A14
+    meta: H144_IGN_3
+    class: outputs
+    function: Smart Ignition 3 Output
+    type: ign
+    ts_name: A14 - IGN 3
+    color: yellow
+
+  - pin: A15
+    meta: H144_OUT_IO4
+    class: outputs
+    function: AC compressor relay Output (low)
+    type: ls
+    ts_name: A15 - AC Rly
+    color: purple
+
+  - pin: A16
+    meta: H144_OUT_IO13
+    class: outputs
+    function: Alt control Output (low)
+    type: ls
+    ts_name: A16 - Alt CTR
+    color: purple
+
+  - pin: A17
+    meta: H144_OUT_PWM5
+    class: outputs
+    function: IAB/PWM Output (low)
+    type: ls
+    ts_name: A17 - IAB/PWM3
+    color: purple
+
+  - pin: A18
+    meta: H144_OUT_PWM6
+    class: outputs
+    function: HS2 Output
+    type: hs
+    ts_name: A18 - HS2
+    color: purple
+
+  - pin: A19
+    function: ETB+
+    type: etb
+    color: blue
+
+  - pin: A20
+    function: ETB-
+    type: etb
+    color: blue
+
+  - pin: A21
+    meta: H144_IGN_5
+    class: outputs
+    function: ICM Ignition Output
+    type: ign
+    ts_name: A21 - ICM CTR
+    color: yellow
+
+  - pin: A22
+    meta: H144_IGN_4
+    class: outputs
+    function: Smart Ignition 4 Output
+    type: ign
+    ts_name: A22 - IGN 4
+    color: yellow
+
+  - pin: A23
+    function: Power Ground
+    type: gnd
+    color: black
+
+  - pin: A24
+    function: Power Ground
+    type: gnd
+    color: black
+
+  - pin: A25
+    meta: H144_IN_VBATT
     class: analog_inputs
-# getAdcChannelBrainPin in 'stm32_adc.cpp' says EFI_ADC_0 is PA0
-    ts_name: On-board Battery Sense (A0)
+    function: +12V
+    ts_name: A25 - BAT VOLT
+    type: 12v
+    color: red
 
-  - id: EFI_ADC_1
+  - pin: A26
+    function: Power Ground
+    type: gnd
+    color: black
+
+  - pin: B1
+    function: +12V
+    type: 12V
+    color: red
+
+  - pin: B2
+    function: Power Ground
+    type: gnd
+    color: black
+
+  - pin: B5
+    meta: H144_IN_D_2
+    class: switch_inputs
+    function: AC / DIN2
+    type: hall
+    ts_name: B5  - AC/DIN1
+    color: gray
+
+  - pin: B6
+    meta: H144_IN_D_1
+    class: event_inputs
+    function: DIN1
+    type: hall
+    ts_name: B6  - DIN2
+    color: gray
+
+  - pin: B7
+    meta: H144_IN_SENS1
+    class: switch_inputs
+    function: Clutch / Digital Input 3
+    type: hall
+    ts_name: B7  - CLUTCH/DIN3
+    color: gray
+
+  - pin: B8
+    meta: H144_IN_SENS2
+    class: event_inputs
+    function: Power steering switch / Digital Input 4
+    type: hall
+    ts_name: B8  - PSSW/DIN4
+    color: gray
+
+  - pin: B10
+    meta: H144_IN_SENS3
+    class: event_inputs
+    function: VSS /Digital Input 5
+    type: hall
+    ts_name: B10 - VSS/DIN5
+    color: gray
+
+  - pin: B11
+    meta: H144_IN_D_4
+    class: event_inputs
+    function: Cam Sensor (VR)+
+    type: hall
+    ts_name: B11 - CMP/DIN6
+    color: gray
+
+  - pin: B12
+    function: Cam Sensor (VR)-
+    type: hall
+    color: gray
+
+  - pin: B15
+    meta: H144_IN_D_3
+    class: event_inputs
+    function: Crank Sensor (VR)+
+    type: hall
+    ts_name: B15 - CKP/DIN7
+    color: gray
+
+  - pin: B12
+    function: Crank Sensor (VR)-
+    type: hall
+    color: gray
+
+  - pin: D1
+    function: Constant +12v
+    type: 12v
+    color: red
+
+  - pin: D2
+    meta: H144_IN_SENS4
+    class: switch_inputs
+    function: Brake / Digital Input 6 (12v)
+    type: hall
+    ts_name: D2  - Brk/DIN8
+    color: gray
+
+  - pin: D3
+    ts_name: D9 - KNOCK
+    function: Knock Sensor
+    color: green
+
+  - pin: D4
+    meta: H144_IN_CAM
+    class: switch_inputs
+    function: Service Engine Check / General input 1
+    type: hall
+    ts_name: D4  - SCS/RES1
+    color: green
+
+  - pin: D5
+    meta: H144_IN_PPS
     class: analog_inputs
-    ts_name: Analog Inputs 1 (A1)
+    function: Analog 1 - PPS
+    ts_name: D5  - AIN1
+    color: orange
 
-  - id: EFI_ADC_2
+  - pin: D6
+    meta: H144_IN_CRANK
+    class: switch_inputs
+    function: Vtec Presure switch / General Input 2
+    ts_name: D6  - VTPSW/RES2
+    color: brown
+
+  - pin: D7
+    meta: H144_IN_MAP1
     class: analog_inputs
-    ts_name: Analog Inputs 2 (A2)
+    ts_name: D7  - TXD/AIN2
+    function: Analog Input 2 / MAP1
+    color: orange
 
-  - id: EFI_ADC_3
+  - pin: D8
+    meta: H144_IN_O2S2
     class: analog_inputs
-    ts_name: Analog Inputs 3 (A3)
+    ts_name: D8  - AIN3
+    function: Analog Aux1 Input
+    color: orange
 
-  - id: EFI_ADC_4
+  - pin: D9
+    meta: H144_IN_MAP2
     class: analog_inputs
-    ts_name: Analog Inputs 4 (A4)
+    ts_name: D9  - AIN4
+    function: Analog Input 4 / MAP2
+    color: orange
 
-  - id: EFI_ADC_5
+  - pin: D10
+    meta: H144_IN_AUX4
     class: analog_inputs
-    ts_name: On-board MAP (A5)
+    ts_name: D10 - AIN5/TIN1
+    function: Analog Input 5 / AUX4
+    color: orange
 
-  - id: EFI_ADC_6
+  - pin: D11
+    meta: H144_IN_TPS
     class: analog_inputs
-    ts_name: Analog Inputs 6 (A6)
+    function: TPS Sensor Input
+    ts_name: D11 - TPS/AIN6
+    color: orange
 
-  - id: EFI_ADC_7
+  - pin: D12
+    meta: H144_IN_AUX2
     class: analog_inputs
-    ts_name: Analog Inputs 7 (A7)
+    ts_name: D12 - AIN7/TIN2
+    function: Analog Input 7 / AUX2
+    color: orange
 
-  - id: EFI_ADC_8
+  - pin: D13
+    meta: H144_IN_CLT
+    class: analog_inputs 
+    function: ECT/CLT Sensor Input
+    ts_name: D13 - ECT/TIN3
+    color: orange
+
+  - pin: D14
+    meta: H144_IN_O2S
     class: analog_inputs
-    ts_name: On-board BARO (B0)
+    function: O2 Sensor Input / Analog input 8
+    ts_name: D14 - O2/AIN8
+    color: orange
 
-  - id: EFI_ADC_9
+  - pin: D15
+    meta: H144_IN_IAT
     class: analog_inputs
-    ts_name: Analog Inputs 9 (B1)
+    function: IAT Sensor Input
+    ts_name: D15 - IAT/TIN4
+    color: orange
 
-  - id: EFI_ADC_10
+  - pin: D16
+    meta: H144_IN_AUX3
     class: analog_inputs
-    ts_name: Analog Inputs 10 (C0)
+    function: Analog input 9
+    ts_name: D16 - AIN9
+    color: orange
 
-  - id: EFI_ADC_11
+  - pin: D17
+    meta: H144_IN_MAP3
     class: analog_inputs
-    ts_name: Primary On-board O2 (C1)
+    function: MAP Sensor Input / Analog input 10
+    ts_name: D17 - MAP/AIN10
+    color: orange
 
-  - id: EFI_ADC_12
+  - pin: D18
+    meta: H144_IN_AUX1
     class: analog_inputs
-    ts_name: Secondary On-board O2 (C2)
+    function: Analog input 9
+    ts_name: D18 - AIN11
+    color: orange
 
-  - id: EFI_ADC_13
-    class: analog_inputs
-    ts_name: Analog Inputs 13 (C3)
+  - pin: D19
+    function: Sensor +5v Power Feed
+    type: 5v
+    color: orange
 
-  - id: EFI_ADC_14
-    class: analog_inputs
-    ts_name: Analog Inputs 14 (C4)
+  - pin: D20
+    function: Sensor +5v Power Feed
+    type: 5v
+    color: orange
 
-  - id: EFI_ADC_15
-    class: analog_inputs
-    ts_name: Analog Inputs 15 (C5)
+  - pin: D21
+    function: Sensor Ground Referance
+    type: grd
+    color: brown
 
-  - id: [E2, E2]
-    class: [switch_inputs, event_inputs]
-    ts_name: VR/Hall 1 (E2)
+  - pin: D22
+    function: Sensor Ground Referance
+    type: grd
+    color: brown
 
-  - id: [E3, E3]
-    class: [switch_inputs, event_inputs]
-    ts_name: VR/Hall 2 (E3)
-
-  - id: [E4, E4]
-    class: [switch_inputs, event_inputs]
-    ts_name: VR/Hall 3 (E4)
+info:
+  title: VTHPNP
+  name: VTHPNP
+  board_url: https://rusefi.com/s/vthpnp
+  directory: hellen/vthpnp
+  image:
+    file: vthpnp.jpg
+  pins:
+    - pin: A8
+      x: 316
+      y: 239
