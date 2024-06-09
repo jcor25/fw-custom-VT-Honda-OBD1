@@ -12,8 +12,6 @@
 #include "defaults.h"
 
 
-static void setledsPins() {
-
 	Gpio getCommsLedPin() {
 	return Gpio::E7;
 }
@@ -25,9 +23,6 @@ Gpio getRunningLedPin() {
 Gpio getWarningLedPin() {
 	return Gpio::E8;
 }
-
-}
-
 
 static void setInjectorPins() {
 
