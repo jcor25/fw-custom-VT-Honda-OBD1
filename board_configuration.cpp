@@ -15,15 +15,15 @@
 static void setledsPins() {
 
 	Gpio getCommsLedPin() {
-	return H144_LED3_BLUE;
+	return Gpio::E7;
 }
 
 Gpio getRunningLedPin() {
-	return H144_LED2_GREEN;
+	return Gpio::G1;
 }
 
 Gpio getWarningLedPin() {
-	return H144_LED4_YELLOW;
+	return Gpio::E8;
 }
 
 }
@@ -31,37 +31,37 @@ Gpio getWarningLedPin() {
 
 static void setInjectorPins() {
 
-	engineConfiguration->injectionPins[0] = Gpio::H144_LS_1;
-	engineConfiguration->injectionPins[1] = Gpio::H144_LS_2;
-	engineConfiguration->injectionPins[2] = Gpio::H144_LS_3;
-	engineConfiguration->injectionPins[3] = Gpio::H144_LS_4;
+	engineConfiguration->injectionPins[0] = Gpio::G7;
+	engineConfiguration->injectionPins[1] = Gpio::G8;
+	engineConfiguration->injectionPins[2] = Gpio::D11;
+	engineConfiguration->injectionPins[3] = Gpio::D10;
 }
 
 
 
 static void setIgnitionPins() {
 
-	engineConfiguration->ignitionPins[0] = Gpio::H144_IGN_5;
-	engineConfiguration->ignitionPins[1] = Gpio::H144_IGN_2;
-	engineConfiguration->ignitionPins[2] = Gpio::H144_IGN_3;
-	engineConfiguration->ignitionPins[3] = Gpio::H144_IGN_4;
+	engineConfiguration->ignitionPins[0] = Gpio::E2;
+	engineConfiguration->ignitionPins[1] = Gpio::E5;
+	engineConfiguration->ignitionPins[2] = Gpio::E4;
+	engineConfiguration->ignitionPins[3] = Gpio::E3;
 }
 
 
 static void setupDefaultSensorInputs() {
 	// trigger inputs, hall
-	engineConfiguration->triggerInputPins[0] = Gpio::H144_IN_D_3;
+	engineConfiguration->triggerInputPins[0] = Gpio::E14;
 	engineConfiguration->triggerInputPins[1] = Gpio::Unassigned;
-	engineConfiguration->camInputs[0] = Gpio::H144_IN_D_4;
+	engineConfiguration->camInputs[0] = Gpio::E15;
 
-	engineConfiguration->tps1_1AdcChannel = H144_IN_TPS;
+	engineConfiguration->tps1_1AdcChannel = EFI_ADC_4;
 
-    	engineConfiguration->map.sensor.hwChannel = H144_IN_MAP3;
+    	engineConfiguration->map.sensor.hwChannel = EFI_ADC_2;
 
-	engineConfiguration->afr.hwChannel = H144_IN_O2S;
+	engineConfiguration->afr.hwChannel = EFI_ADC_0;
 
-	engineConfiguration->clt.adcChannel = H144_IN_CLT;
-	engineConfiguration->iat.adcChannel = H144_IN_IAT;
+	engineConfiguration->clt.adcChannel = EFI_ADC_12;
+	engineConfiguration->iat.adcChannel = EFI_ADC_13;
 	engineConfiguration->clt.config.bias_resistor = 2700;
 	engineConfiguration->iat.config.bias_resistor = 2700;
 }
@@ -76,9 +76,9 @@ void boardInitHardware() {
 void setBoardConfigOverrides() {
 
 	
-	engineConfiguration->etbIo[0].controlPin = Gpio::H144_OUT_PWM4; // etb pwm
-	engineConfiguration->etbIo[0].directionPin1 = Gpio::H144_OUT_IO2; // ebt dir
-	engineConfiguration->etbIo[0].disablePin = Gpio::H144_OUT_IO12; // etb dis
+	engineConfiguration->etbIo[0].controlPin = Gpio::C8; // etb pwm
+	engineConfiguration->etbIo[0].directionPin1 = Gpio::A9; // ebt dir
+	engineConfiguration->etbIo[0].disablePin = Gpio::A8; // etb dis
 	engineConfiguration->vrThreshold[0].pin = Gpio::Unassigned;
 	engineConfiguration->vrThreshold[1].pin = Gpio::Unassigned;
 
@@ -86,18 +86,18 @@ void setBoardConfigOverrides() {
 
 
 	// hellenMegaSdWithAccelerometer();
-	engineConfiguration->spi1mosiPin = Gpio::H_SPI1_MOSI;
-	engineConfiguration->spi1misoPin = Gpio::H_SPI1_MISO;
-	engineConfiguration->spi1sckPin = Gpio::H_SPI1_SCK;
+	engineConfiguration->spi1mosiPin = Gpio::B5;
+	engineConfiguration->spi1misoPin = Gpio::B4;
+	engineConfiguration->spi1sckPin = Gpio::B3;
 	engineConfiguration->is_enabled_spi_1 = true;
 	
 	engineConfiguration->sdCardSpiDevice = SPI_DEVICE_1;
 
 	engineConfiguration->accelerometerSpiDevice = SPI_DEVICE_1;
-	engineConfiguration->accelerometerCsPin = Gpio::H_SPI1_CS2;
+	engineConfiguration->accelerometerCsPin = Gpio::B7;
 
-	engineConfiguration->binarySerialRxPin = H144_UART2_RX;
-	engineConfiguration->binarySerialTxPin = H144_UART2_TX;
+	engineConfiguration->binarySerialRxPin = D6;
+	engineConfiguration->binarySerialTxPin = D5;
 	// engineConfiguration->tunerStudioSerialSpeed = 115200;
 
 
@@ -117,7 +117,7 @@ void setBoardDefaultConfiguration() {
 	
 	engineConfiguration->vbattDividerCoeff = (33 + 6.8) / 6.8; // 5.835
 
-	engineConfiguration->vbattAdcChannel = H144_IN_VBATT;
+	engineConfiguration->vbattAdcChannel = EFI_ADC_5;
 
 	engineConfiguration->adcVcc = 3.29f;
 
@@ -135,23 +135,23 @@ void setBoardDefaultConfiguration() {
 //    	engineConfiguration->boardUseTempPullUp = true;
 
 	//setHellenCan();
-	engineConfiguration->canTxPin = H176_CAN_TX;
-	engineConfiguration->canRxPin = H176_CAN_RX;
+	engineConfiguration->canTxPin = D1;
+	engineConfiguration->canRxPin = D0;
 
-	engineConfiguration->vehicleSpeedSensorInputPin = Gpio::H144_IN_SENS3;
-	engineConfiguration->clutchDownPin = Gpio::H144_IN_SENS1;
+	engineConfiguration->vehicleSpeedSensorInputPin = Gpio::F5;
+	engineConfiguration->clutchDownPin = Gpio::F3;
 
-	engineConfiguration->acRelayPin = Gpio::H144_OUT_IO4;
-	engineConfiguration->acSwitch = Gpio::H144_IN_D_2;
+	engineConfiguration->acRelayPin = Gpio::G5;
+	engineConfiguration->acSwitch = Gpio::E13;
 
-	engineConfiguration->fuelPumpPin = Gpio::H144_OUT_IO11;
-	engineConfiguration->fanPin = Gpio::H144_OUT_IO8;
+	engineConfiguration->fuelPumpPin = Gpio::H144_G2;
+	engineConfiguration->fanPin = Gpio::G4;
 	engineConfiguration->enableFan1WithAc = true;
-        engineConfiguration->boostControlPin = Gpio::H144_OUT_PWM3;	
-	engineConfiguration->idle.solenoidPin = Gpio::H144_OUT_PWM2;
-	// engineConfiguration->tachOutputPin = Gpio::H144_IGN_6;
-	// engineConfiguration->alternatorControlPin = Gpio::H144_OUT_IO13;
-	engineConfiguration->malfunctionIndicatorPin = Gpio::H144_OUT_IO7;
+        engineConfiguration->boostControlPin = Gpio::C7;	
+	engineConfiguration->idle.solenoidPin = Gpio::C6;
+	// engineConfiguration->tachOutputPin = Gpio::B8;
+	// engineConfiguration->alternatorControlPin = Gpio::G6;
+	engineConfiguration->malfunctionIndicatorPin = Gpio::G3;
 
 	// "required" hardware is done - set some reasonable defaults
 	setupDefaultSensorInputs();
@@ -170,26 +170,26 @@ void setBoardDefaultConfiguration() {
 
 
 static Gpio OUTPUTS[] = {
-		Gpio::H144_LS_1, 
-		Gpio::H144_LS_2,
-		Gpio::H144_LS_3,
-		Gpio::H144_LS_4,
-		Gpio::H144_IGN_1,
-		Gpio::H144_IGN_2,
-		Gpio::H144_IGN_3,
-		Gpio::H144_IGN_4,
-		Gpio::H144_IGN_5,
-		Gpio::H144_IGN_6,
-		Gpio::H144_OUT_PWM2,
-		Gpio::H144_OUT_PWM3,
-		Gpio::H144_OUT_PWM5,
-		Gpio::H144_OUT_PWM6,
-		Gpio::H144_OUT_PWM7,
-		Gpio::H144_OUT_IO4,
-		Gpio::H144_OUT_IO7,
-		Gpio::H144_OUT_IO8,
-		Gpio::H144_OUT_IO11,
-		Gpio::H144_OUT_IO13,
+		Gpio::G7, 
+		Gpio::G8,
+		Gpio::D11,
+		Gpio::D10,
+		Gpio::C13,
+		Gpio::E5,
+		Gpio::E4,
+		Gpio::E3,
+		Gpio::E2,
+		Gpio::B8,
+		Gpio::C6,
+		Gpio::C7,
+		Gpio::C8,
+		Gpio::D14,
+		Gpio::D15,
+		Gpio::G5,
+		Gpio::G3,
+		Gpio::G4,
+		Gpio::G2,
+		Gpio::G6,
 };
 
 int getBoardMetaOutputsCount() {
