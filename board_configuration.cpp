@@ -96,8 +96,8 @@ void setBoardConfigOverrides() {
 	engineConfiguration->accelerometerSpiDevice = SPI_DEVICE_1;
 	engineConfiguration->accelerometerCsPin = Gpio::B7;
 
-	engineConfiguration->binarySerialRxPin = D6;
-	engineConfiguration->binarySerialTxPin = D5;
+	engineConfiguration->binarySerialRxPin = Gpio::D6;
+	engineConfiguration->binarySerialTxPin = Gpio::D5;
 	// engineConfiguration->tunerStudioSerialSpeed = 115200;
 
 
@@ -135,8 +135,8 @@ void setBoardDefaultConfiguration() {
 //    	engineConfiguration->boardUseTempPullUp = true;
 
 	//setHellenCan();
-	engineConfiguration->canTxPin = D1;
-	engineConfiguration->canRxPin = D0;
+	engineConfiguration->canTxPin = Gpio::D1;
+	engineConfiguration->canRxPin = Gpio::D0;
 
 	engineConfiguration->vehicleSpeedSensorInputPin = Gpio::F5;
 	engineConfiguration->clutchDownPin = Gpio::F3;
@@ -144,7 +144,7 @@ void setBoardDefaultConfiguration() {
 	engineConfiguration->acRelayPin = Gpio::G5;
 	engineConfiguration->acSwitch = Gpio::E13;
 
-	engineConfiguration->fuelPumpPin = Gpio::H144_G2;
+	engineConfiguration->fuelPumpPin = Gpio::G2;
 	engineConfiguration->fanPin = Gpio::G4;
 	engineConfiguration->enableFan1WithAc = true;
         engineConfiguration->boostControlPin = Gpio::C7;	
