@@ -68,7 +68,7 @@ void setBoardConfigOverrides() {
 	engineConfiguration->vrThreshold[1].pin = Gpio::Unassigned;
 
         //setHellenEnPin(Gpio::H144_GP_IO7);
-	megaEn.initPin(Gpio::H144_GP_IO7);
+
 
 	// hellenMegaSdWithAccelerometer();
 	engineConfiguration->spi1mosiPin = Gpio::H_SPI1_MOSI;
