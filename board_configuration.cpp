@@ -12,6 +12,22 @@
 #include "defaults.h"
 
 
+static void setledsPins() {
+
+	Gpio getCommsLedPin() {
+	return H144_LED3_BLUE;
+}
+
+Gpio getRunningLedPin() {
+	return H144_LED2_GREEN;
+}
+
+Gpio getWarningLedPin() {
+	return H144_LED4_YELLOW;
+}
+
+}
+
 
 static void setInjectorPins() {
 
@@ -107,6 +123,7 @@ void setBoardDefaultConfiguration() {
 
 	setInjectorPins();
 	setIgnitionPins();
+	setledsPins();
 
 	
 	engineConfiguration->lps25BaroSensorScl = Gpio::B10; // sethellenmmbaro
