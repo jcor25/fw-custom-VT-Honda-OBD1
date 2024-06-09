@@ -1,7 +1,6 @@
 
 pins:
-  - id: A1
-    meta: G7
+  - meta: G7
     function: Injector 1 Output
     class: outputs
     type: inj
@@ -16,400 +15,343 @@ pins:
     ts_name: A2  - INJ 4
     color: blue
 
-  - id: A3
-    meta: G8
+  - meta: G8
     function: Injector 2 Output
     class: outputs
     type: inj
     ts_name: A2  - INJ 2
     color: blue
 
-  - id: A4
-    meta: D15
+  - meta: D15
     class: outputs
     function: Vtec solineod 
     type: ls
     ts_name: A4  - VTS/HS1
     color: purple
 
-  - id: A5
-    meta: D11
+  - meta: D11
     function: Injector 3 Output
     class: outputs
     type: inj
     ts_name: A5  - INJ 3
     color: blue
 
-  - id: A6
-    meta: B8
+  - meta: B8
     function: Tach Output
     class: outputs
     type: ls
     ts_name: A6  - TACH
     color: blue
 
-  - id: A7
-    meta: G2
+  - meta: G2
     class: outputs
     function: Fuel Pump Relay Output
     type: ls
     ts_name: A7  - FP Rly
     color: purple
 
-  - id: A8
-    meta: C13
+  - meta: C13
     class: outputs
     function: Smart Ignition 1 Output
     type: ign
     ts_name: A8  - IGN 1
     color: yellow
 
-  - id: A9
-    meta: C6
+  - meta: C6
     class: outputs
     function: Idle Output (low)
     type: ls
     ts_name: A9  - IACV/PWM1
     color: purple
 
-  - id: A10
-    meta: E5
+  - meta: E5
     class: outputs
     function: Smart Ignition 2 Output
     type: ign
     ts_name: A10 - IGN 2
     color: yellow
 
-  - id: A11
-    meta: C7
+  - meta: C7
     class: outputs
     function: PWM1 Output (low)
     type: ls
     ts_name: A11 - EGR/PWM2
     color: purple
 
-  - id: A12
-    meta: G4
+  - meta: G4
     class: outputs
     function: Fan Relay Output (low)
     type: ls
     ts_name: A12 - FAN Rly
     color: purple
 
-  - id: A13
-    meta: G3
+  - meta: G3
     class: outputs
     function: MIL Output (low)
     type: ls
     ts_name: A13 - MIL CTR
     color: purple
 
-  - id: A14
-    meta: E4
+  - meta: E4
     class: outputs
     function: Smart Ignition 3 Output
     type: ign
     ts_name: A14 - IGN 3
     color: yellow
 
-  - id: A15
-    meta: G5
+  - meta: G5
     class: outputs
     function: AC compressor relay Output (low)
     type: ls
     ts_name: A15 - AC Rly
     color: purple
 
-  - id: A16
-    meta: G6
+  - meta: G6
     class: outputs
     function: Alt control Output (low)
     type: ls
     ts_name: A16 - Alt CTR
     color: purple
 
-  - id: A17
-    meta: H144_OUT_PWM5
+  - meta: H144_OUT_PWM5
     class: outputs
     function: IAB/PWM Output (low)
     type: ls
     ts_name: A17 - IAB/PWM3
     color: purple
 
-  - id: A18
-    meta: C9
+  - meta: C9
     class: outputs
     function: HS2 Output
     type: hs
     ts_name: A18 - HS2
     color: purple
 
-  - id: A19
-    function: ETB+
+  - function: ETB+
     type: etb
     color: blue
 
-  - id: A20
-    function: ETB-
+  - function: ETB-
     type: etb
     color: blue
 
-  - id: A21
-    meta: E2
+  - meta: E2
     class: outputs
     function: ICM Ignition Output
     type: ign
     ts_name: A21 - ICM CTR
     color: yellow
 
-  - id: A22
-    meta: E3
+  - meta: E3
     class: outputs
     function: Smart Ignition 4 Output
     type: ign
     ts_name: A22 - IGN 4
     color: yellow
 
-  - id: A23
-    function: Power Ground
+  - function: Power Ground
     type: gnd
     color: black
 
-  - id: A24
-    function: Power Ground
+  - function: Power Ground
     type: gnd
     color: black
 
-  - id: A25
-    meta: EFI_ADC_5
+  - meta: EFI_ADC_5
     class: analog_inputs
     function: +12V
     ts_name: A25 - BAT VOLT
     type: 12v
     color: red
 
-  - id: A26
-    function: Power Ground
+  - function: Power Ground
     type: gnd
     color: black
 
-  - id: B1
-    function: +12V
+  - function: +12V
     type: 12V
     color: red
 
-  - id: B2
-    function: Power Ground
+  - function: Power Ground
     type: gnd
     color: black
 
-  - id: B5
-    meta: E13
+  - meta: E13
     class: switch_inputs
     function: AC / DIN2
     type: hall
     ts_name: B5  - AC/DIN1
     color: gray
 
-  - id: B6
-    meta: E12
+  - meta: E12
     class: event_inputs
     function: DIN1
     type: hall
     ts_name: B6  - DIN2
     color: gray
 
-  - id: B7
-    meta: F3
+  - meta: F3
     class: switch_inputs
     function: Clutch / Digital Input 3
     type: hall
     ts_name: B7  - CLUTCH/DIN3
     color: gray
 
-  - id: B8
-    meta: F4
+  - meta: F4
     class: event_inputs
     function: Power steering switch / Digital Input 4
     type: hall
     ts_name: B8  - PSSW/DIN4
     color: gray
 
-  - id: B10
-    meta: F5
+  - meta: F5
     class: event_inputs
     function: VSS /Digital Input 5
     type: hall
     ts_name: B10 - VSS/DIN5
     color: gray
 
-  - id: B11
-    meta: E15
+  - meta: E15
     class: event_inputs
     function: Cam Sensor (VR)+
     type: hall
     ts_name: B11 - CMP/DIN6
     color: gray
 
-  - id: B12
-    function: Cam Sensor (VR)- / Ground
+  - function: Cam Sensor (VR)- / Ground
     type: hall
     color: gray
 
-  - id: B15
-    meta: E14
+  - meta: E14
     class: event_inputs
     function: Crank Sensor (VR)+
     type: hall
     ts_name: B15 - CKP/DIN7
     color: gray
 
-  - id: B12
-    function: Crank Sensor (VR)- / Ground
+  - function: Crank Sensor (VR)- / Ground
     type: hall
     color: gray
 
-  - id: D1
-    function: Constant +12v (Not Used)
+  - function: Constant +12v (Not Used)
     type: 12v
     color: red
 
-  - id: D2
-    meta: F6
+  - meta: F6
     class: switch_inputs
     function: Brake / Digital Input 6 (12v)
     type: hall
     ts_name: D2  - Brk/DIN8
     color: gray
 
-  - id: D3
-    ts_name: D9 - KNOCK
+  - ts_name: D9 - KNOCK
     function: Knock Sensor
     color: green
 
-  - id: D4
-    meta: A6
+  - meta: A6
     class: switch_inputs
     function: Service Engine Check / General input 1
     type: hall
     ts_name: D4  - SCS/RES1
     color: green
 
-  - id: D5
-    meta: EFI_ADC_3
+  - meta: EFI_ADC_3
     class: analog_inputs
     function: Analog 1 - PPS
     ts_name: D5  - AIN1
     color: orange
 
-  - id: D6
-    meta: B1
+  - meta: B1
     class: switch_inputs
     function: Vtec Presure switch / General Input 2
     ts_name: D6  - VTPSW/RES2
     color: brown
 
-  - id: D7
-    meta: EFI_ADC_10
+  - meta: EFI_ADC_10
     class: analog_inputs
     ts_name: D7  - TXD/AIN2
     function: Analog Input 2 / MAP1
     color: orange
 
-  - id: D8
-    meta: EFI_ADC_1
+  - meta: EFI_ADC_1
     class: analog_inputs
     ts_name: D8  - AIN3
     function: Analog Aux1 Input
     color: orange
 
-  - id: D9
-    meta: EFI_ADC_11
+  - meta: EFI_ADC_11
     class: analog_inputs
     ts_name: D9  - AIN4
     function: Analog Input 4 / MAP2
     color: orange
 
-  - id: D10
-    meta: EFI_ADC_15
+  - meta: EFI_ADC_15
     class: analog_inputs
     ts_name: D10 - AIN5/TIN1
     function: Analog Input 5 / AUX4
     color: orange
 
-  - id: D11
-    meta: EFI_ADC_4
+  - meta: EFI_ADC_4
     class: analog_inputs
     function: TPS Sensor Input
     ts_name: D11 - TPS/AIN6
     color: orange
 
-  - id: D12
-    meta: EFI_ADC_14
+  - meta: EFI_ADC_14
     class: analog_inputs
     ts_name: D12 - AIN7/TIN2
     function: Analog Input 7 / AUX2
     color: orange
 
-  - id: D13
-    meta: EFI_ADC_12
+  - meta: EFI_ADC_12
     class: analog_inputs 
     function: ECT/CLT Sensor Input
     ts_name: D13 - ECT/TIN3
     color: orange
 
-  - id: D14
-    meta: EFI_ADC_0
+  - meta: EFI_ADC_0
     class: analog_inputs
     function: O2 Sensor Input / Analog input 8
     ts_name: D14 - O2/AIN8
     color: orange
 
-  - id: D15
-    meta: EFI_ADC_13
+  - meta: EFI_ADC_13
     class: analog_inputs
     function: IAT Sensor Input
     ts_name: D15 - IAT/TIN4
     color: orange
 
-  - id: D16
-    meta: EFI_ADC_7
+  - meta: EFI_ADC_7
     class: analog_inputs
     function: Analog input 9
     ts_name: D16 - AIN9
     color: orange
 
-  - id: D17
-    meta: EFI_ADC_2
+  - meta: EFI_ADC_2
     class: analog_inputs
     function: MAP Sensor Input / Analog input 10
     ts_name: D17 - MAP/AIN10
     color: orange
 
-  - id: D18
-    meta: EFI_ADC_8
+  - meta: EFI_ADC_8
     class: analog_inputs
     function: Analog input 9
     ts_name: D18 - AIN11
     color: orange
 
-  - id: D19
-    function: Sensor +5v Power Feed
+  - function: Sensor +5v Power Feed
     type: 5v
     color: orange
 
-  - id: D20
-    function: Sensor +5v Power Feed
+  - function: Sensor +5v Power Feed
     type: 5v
     color: orange
 
-  - id: D21
-    function: Sensor Ground Referance
+  - function: Sensor Ground Referance
     type: grd
     color: brown
 
-  - id: D22
-    function: Sensor Ground Referance
+  - function: Sensor Ground Referance
     type: grd
     color: brown
 
