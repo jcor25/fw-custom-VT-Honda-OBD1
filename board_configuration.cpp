@@ -60,7 +60,6 @@ void boardInitHardware() {
 
 void setBoardConfigOverrides() {
 
-	setHellenVbatt();
 	
 	engineConfiguration->etbIo[0].controlPin = Gpio::H144_OUT_PWM4; // etb pwm
 	engineConfiguration->etbIo[0].directionPin1 = Gpio::H144_OUT_IO2; // ebt dir
@@ -68,9 +67,19 @@ void setBoardConfigOverrides() {
 	engineConfiguration->vrThreshold[0].pin = Gpio::Unassigned;
 	engineConfiguration->vrThreshold[1].pin = Gpio::Unassigned;
 
-        setHellenEnPin(Gpio::H144_GP_IO7);
+        //setHellenEnPin(Gpio::H144_GP_IO7);
+	megaEn.initPin(Gpio::H144_GP_IO7);
 
-	hellenMegaSdWithAccelerometer();
+	// hellenMegaSdWithAccelerometer();
+	engineConfiguration->spi1mosiPin = Gpio::H_SPI1_MOSI;
+	engineConfiguration->spi1misoPin = Gpio::H_SPI1_MISO;
+	engineConfiguration->spi1sckPin = Gpio::H_SPI1_SCK;
+	engineConfiguration->is_enabled_spi_1 = true;
+	
+	engineConfiguration->sdCardSpiDevice = SPI_DEVICE_1;
+
+	engineConfiguration->accelerometerSpiDevice = SPI_DEVICE_1;
+	engineConfiguration->accelerometerCsPin = Gpio::H_SPI1_CS2;
 
 	engineConfiguration->binarySerialRxPin = H144_UART2_RX;
 	engineConfiguration->binarySerialTxPin = H144_UART2_TX;
@@ -88,18 +97,30 @@ void setBoardConfigOverrides() {
  */
 void setBoardDefaultConfiguration() {
 
-	setHellenVbatt();
+	//setHellenVbatt();
+	engineConfiguration->analogInputDividerCoefficient = 2.0f;
+	
+	engineConfiguration->vbattDividerCoeff = (33 + 6.8) / 6.8; // 5.835
+
+	engineConfiguration->vbattAdcChannel = H144_IN_VBATT;
+
+	engineConfiguration->adcVcc = 3.29f;
 
 	setInjectorPins();
 	setIgnitionPins();
 
-    	setHellenMMbaro();
+	
+	engineConfiguration->lps25BaroSensorScl = Gpio::B10; // sethellenmmbaro
+	engineConfiguration->lps25BaroSensorSda = Gpio::B11;
+    	
 	
 	engineConfiguration->enableSoftwareKnock = true;
 
 //    	engineConfiguration->boardUseTempPullUp = true;
 
-	setHellenCan();
+	//setHellenCan();
+	engineConfiguration->canTxPin = H176_CAN_TX;
+	engineConfiguration->canRxPin = H176_CAN_RX;
 
 	engineConfiguration->vehicleSpeedSensorInputPin = Gpio::H144_IN_SENS3;
 	engineConfiguration->clutchDownPin = Gpio::H144_IN_SENS1;
