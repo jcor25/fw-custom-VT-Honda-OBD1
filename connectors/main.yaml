@@ -113,14 +113,14 @@ pins:
     ts_name: A16 - Alt CTR
     color: purple
 
-  - id: C7
+  - id: C9
     class: outputs
     function: IAB/PWM Output (low)
     type: ls
     ts_name: A17 - IAB/PWM3
     color: purple
 
-  - id: C9
+  - id: D14
     class: outputs
     function: HS2 Output
     type: hs
