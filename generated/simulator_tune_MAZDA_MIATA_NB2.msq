@@ -4722,7 +4722,7 @@ end</constant>
 </constant>
         <constant digits="0" name="tcu_shiftTime" units="ms">0.0</constant>
     </page>
-    <versionInfo firmwareInfo="20240607" nPages="1" signature="rusEFI main.2024.06.09.VTHPNP.2583412487" version="5.0"/>
+    <versionInfo firmwareInfo="20240607" nPages="1" signature="rusEFI main.2024.06.09.VTHPNP.1388547600" version="5.0"/>
     <bibliography author="rusEFI 20240607" writeDate="date"/>
     <settings/>
     <userComments/>
