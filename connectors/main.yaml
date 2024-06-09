@@ -113,7 +113,7 @@ pins:
     ts_name: A16 - Alt CTR
     color: purple
 
-  - id: C9
+  - id: C7
     class: outputs
     function: IAB/PWM Output (low)
     type: ls
