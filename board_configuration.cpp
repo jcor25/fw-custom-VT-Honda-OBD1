@@ -118,7 +118,6 @@ void setBoardDefaultConfiguration() {
 
 	setInjectorPins();
 	setIgnitionPins();
-	setledsPins();
 
 	
 	engineConfiguration->lps25BaroSensorScl = Gpio::B10; // sethellenmmbaro
