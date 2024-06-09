@@ -26,7 +26,7 @@ static void setInjectorPins() {
 
 static void setIgnitionPins() {
 
-	engineConfiguration->ignitionPins[0] = Gpio::H144_IGN_1;
+	engineConfiguration->ignitionPins[0] = Gpio::H144_IGN_5;
 	engineConfiguration->ignitionPins[1] = Gpio::H144_IGN_2;
 	engineConfiguration->ignitionPins[2] = Gpio::H144_IGN_3;
 	engineConfiguration->ignitionPins[3] = Gpio::H144_IGN_4;
@@ -118,14 +118,13 @@ void setBoardDefaultConfiguration() {
 
 	// "required" hardware is done - set some reasonable defaults
 	setupDefaultSensorInputs();
-	
+
 	engineConfiguration->cylindersCount = 4;
 	engineConfiguration->firingOrder = FO_1_3_4_2;
 
 	engineConfiguration->injector.flow = 238.0;
 	engineConfiguration->map.sensor.type = MT_DENSO183;
 	engineConfiguration->ignitionMode = IM_ONE_COIL;
-
 
 	setAlgorithm(LM_SPEED_DENSITY);	
 
